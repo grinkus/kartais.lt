@@ -1,0 +1,14 @@
+body {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+article {
+	> section {
+		margin-left: 32%;
+	}
+}
+
+h1 {
+	padding-left: 32%;
+}

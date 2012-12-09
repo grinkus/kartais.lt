@@ -30,7 +30,7 @@ html {
 
 body {
 	margin: 0;
-	padding: 0;
+	padding: 0 $gutterwidth;
 	width: 100%;
 	background-color: transparent;
 	font-family: $basefont;
@@ -38,3 +38,5 @@ body {
 	line-height: $baselineheight;
 	color: $textcolor;
 }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

@@ -1,6 +1,7 @@
 body {
 	header {
 		font-style: italic;
+		text-align: center;
 
 		p {
 			background: #333;
@@ -8,7 +9,6 @@ body {
 			color: #fff;
 			display: inline-block;
 			@include font-size(28);
-			margin-left: $gutterwidth;
 			height: $baselineheight * 3;
 			width: $baselineheight * 3;
 			line-height: $baselineheight * 3;
@@ -24,6 +24,10 @@ body {
 	footer {
 		padding-top: $baselineheight;
 		text-align: center;
+
+		> p {
+			max-width: inherit;
+		}
 	}
 }
 
@@ -33,17 +37,6 @@ h1 {
 	a {
 		border: 0;
 	}
-
-	& + p {
-		@include font-size(28);
-		max-width: 27em;
-	}
-}
-
-p {
-	@include font-size(21);
-	margin-left: auto;
-	margin-right: auto;
 }
 
 a {

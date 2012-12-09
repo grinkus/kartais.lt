@@ -1,0 +1,15 @@
+article {
+	> h1 {
+		@include font-size(48);
+	}
+}
+
+section {
+	> p:first-child {
+		@include font-size(21);
+	}
+}
+
+p {
+	@include font-size(18);
+}
