@@ -1,0 +1,16 @@
+/* Colour =================================================================== */
+a {
+	color: $linkcolor;
+}
+
+::-moz-selection {
+	background-color: lighten($basecolor, 70%);
+	color: $basecolor;
+	text-shadow: none;
+}
+
+::selection {
+	background-color: lighten($basecolor, 70%);
+	color: $basecolor;
+	text-shadow: none;
+}

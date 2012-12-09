@@ -1,0 +1,16 @@
+/* Transitions ============================================================== */
+.transitionless {
+	@include transition(none);
+}
+.transitionless-all {
+	@include transition(none);
+
+	* {
+		@include transition(none);
+	}
+}
+body {
+	* {
+		@include transition(all $transitionspeed $transitionfunction)
+	}
+}

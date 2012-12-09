@@ -1,0 +1,8 @@
+{% include header.ext %}
+	{% for post in site.posts %}
+	<article>
+		<h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+		{{ post.content }}
+	</article>
+	{% endfor %}
+{% include footer.ext %}
