@@ -66,12 +66,13 @@ ul,
 dl,
 address {
 	margin-bottom: $baselineheight;
-	@include font-size(14);
+	max-width: 32em;
+	@include font-size(16);
 	line-height: $baselineheight;
 }
 
 small {
-	@include font-size(14);
+	@include font-size(16);
 }
 
 ul,
@@ -150,7 +151,7 @@ code,
 kbd,
 samp {
 	font-family: $codefont;
-	@include font-size(14);
+	@include font-size(16);
 	line-height: $baselineheight;
 }
 

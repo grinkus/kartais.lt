@@ -20,7 +20,7 @@
 }
 
 html {
-	background-color: #fdfdfd;
+	background-color: #fdfbf3;
 	font-size: 62.5%;
 	-webkit-overflow-scrolling: touch;
 	-webkit-tap-highlight-color: lighten($basecolor, 75%);
@@ -34,7 +34,7 @@ body {
 	width: 100%;
 	background-color: transparent;
 	font-family: $basefont;
-	@include font-size();
+	@include font-size(16);
 	line-height: $baselineheight;
 	color: $textcolor;
 }
