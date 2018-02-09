@@ -1,3 +1,7 @@
+.blog-post-previews {
+  padding-top: 3em;
+}
+
 .blog-post-preview {
   position: relative;
 }
@@ -12,13 +16,24 @@
   text-decoration: underline;
 }
 
-.blog-post-preview__date {
-  left: 0;
-  position: absolute;
-  top: 12px;
+.blog-post-preview__link:hover .blog-post-preview__title {
+  text-decoration: none;
 }
 
-.blog-post-preview__excerpt,
 .blog-post-preview__title {
-  padding-left: 200px;
+  font-size: 1em;
+  margin: 0 0 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .blog-post-preview__date {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .blog-post-preview__excerpt,
+  .blog-post-preview__title {
+    padding-left: 200px;
+  }
 }

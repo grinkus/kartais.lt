@@ -23,15 +23,15 @@ const IndexPage = ({ data }) => {
                   to={post.frontmatter.path}
                 >
                 <header>
-                  <h2 className="blog-post-preview__title">
-                    {post.frontmatter.title}
-                  </h2>
                   <time
                     className="blog-post-preview__date"
                     dateTime={`${post.frontmatter.date}Z`}
                   >
                     {post.frontmatter.date}
                   </time>
+                  <h2 className="blog-post-preview__title">
+                    {post.frontmatter.title}
+                  </h2>
                 </header>
                 <p className="blog-post-preview__excerpt">{post.excerpt}</p>
                 </Link>
