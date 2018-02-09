@@ -1,26 +1,20 @@
 {
   "name": "kartais.lt",
   "version": "1.0.0",
-  "description": "Kartais piktas, kartais blogas",
+  "description": "kartais.lt"
   "main": "index.js",
   "scripts": {
-    "build": "docpad generate",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "docpad run --port 8000"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grinkus/kartais.lt.git"
   },
-  "author": "grinkus",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/grinkus/kartais.lt/issues"
   },
-  "homepage": "https://github.com/grinkus/kartais.lt#readme",
-  "dependencies": {
-    "docpad": "6.79.4",
-    "docpad-plugin-eco": "2.2.1",
-    "docpad-plugin-livereload": "~2.9.0",
-    "docpad-plugin-marked": "2.4.0"
-  }
+  "homepage": "https://github.com/grinkus/kartais.lt#readme"
 }

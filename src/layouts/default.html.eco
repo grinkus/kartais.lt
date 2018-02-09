@@ -1,5 +1,0 @@
-<!doctype html>
-<title><%= @getPreparedTitle() %></title>
-<header class="masthead">kartais piktas, kartais blogas</header>
-<%- @content %>
-<%- @getBlock('scripts').toHTML() %>
