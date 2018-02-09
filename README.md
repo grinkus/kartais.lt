@@ -1,4 +1,3 @@
-kartais.lt
-==========
+# kartais.lt
 
 A personal blog.

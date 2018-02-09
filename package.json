@@ -1,20 +1,30 @@
 {
   "name": "kartais.lt",
+  "description": "kartais.lt",
   "version": "1.0.0",
-  "description": "kartais.lt"
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/grinkus/kartais.lt.git"
+  "author": "grinkus <karolis@kartais.lt>",
+  "dependencies": {
+    "gatsby": "1.9.158",
+    "gatsby-link": "1.6.34",
+    "gatsby-plugin-catch-links": "1.0.15",
+    "gatsby-plugin-react-helmet": "2.0.4",
+    "gatsby-remark-images": "1.5.43",
+    "gatsby-source-filesystem": "1.5.18",
+    "gatsby-transformer-remark": "1.7.31",
+    "normalize.css": "8.0.0",
+    "react-fittext": "1.0.0",
+    "react-helmet": "5.2.0"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/grinkus/kartais.lt/issues"
+  "license": "UNLICENSED",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/grinkus/kartais.lt#readme"
+  "devDependencies": {
+    "prettier": "1.10.2"
+  }
 }

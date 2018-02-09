@@ -1,0 +1,24 @@
+.blog-post-preview {
+  position: relative;
+}
+
+.blog-post-preview__link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.blog-post-preview__link .blog-post-preview__title {
+  text-decoration: underline;
+}
+
+.blog-post-preview__date {
+  left: 0;
+  position: absolute;
+  top: 12px;
+}
+
+.blog-post-preview__excerpt,
+.blog-post-preview__title {
+  padding-left: 200px;
+}

@@ -1,4 +1,5 @@
 node_modules
+.cache/
 
 # Logs
 logs
@@ -18,4 +19,4 @@ pids
 .eslintcache
 
 # Built files
-/out
+public/

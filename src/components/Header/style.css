@@ -1,0 +1,13 @@
+.header {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: -0.5em;
+  text-transform: uppercase;
+  word-spacing: 5px;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
