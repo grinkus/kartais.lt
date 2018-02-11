@@ -1,10 +1,45 @@
 .blog-post {
 }
 
+.blog-post__content {
+  position: relative;
+}
+
 .blog-post__content p {
   margin-left: auto;
   margin-right: auto;
   max-width: 32em;
+}
+
+.blog-post__content blockquote {
+  margin: 1.5em auto;
+  padding: 0.125em 0;
+  position: relative;
+  text-align: center;
+}
+
+.blog-post__content blockquote::before,
+.blog-post__content blockquote::after {
+  background: #EEE;
+  content: "";
+  height: 5px;
+  left: 19%;
+  position: absolute;
+  width: 62%;
+}
+
+.blog-post__content blockquote::before {
+  top: 0;
+}
+
+.blog-post__content blockquote::after {
+  bottom: 0;
+}
+
+.blog-post__content blockquote p {
+  font-size: 1.5em;
+  font-weight: bold;
+  max-width: none;
 }
 
 .blog-post__date,
