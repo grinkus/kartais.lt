@@ -21,8 +21,9 @@ gatvės tai visai kitaip feed'ina. Taško kapoja užsiprogramavę ir papūsk
 tu jiem sėdimojon – *gražuoliai*.
 
 Ir pagalvoji: ko tau parintis, kai yra pasaulyje žmogus, kuris arbūzą
-kapoja. Kai randi žmogų, su kelnių galais visai visai prie kulnų, o jie
-žiemos vidury – sterilūs. Ir paltas žemiau kelių. Ir nosinaitė
-paugrade'intai kaktai nusivalyt pati į rankas prašosi. Žinai,
+ramiu žvilgsniu turguj kapoja. Kai randi žmogų, su kelnių galais visai
+visai prie kulnų, o jie žiemos vidury – sterilūs, o paltas – žemiau
+kelių; ir nosinaitė paupgrade'intai kaktai nusivalyt pati į rankas
+prašosi. O dar ir taksisto gimtadienis tikrai ne kasdien. Žinai,
 empiriniais tyrimais įrodyta, kad europinio galiuko rusiškon skylutėn
 nesukiši. Tai kam ten prakaituot.
