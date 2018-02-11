@@ -3,7 +3,13 @@
 }
 
 .blog-post-preview {
+  padding-bottom: 1em;
+  padding-top: 2em;
   position: relative;
+}
+
+.blog-post-preview + .blog-post-preview {
+  border-top: 1px dotted #EEE;
 }
 
 .blog-post-preview__link {
@@ -29,7 +35,7 @@
   .blog-post-preview__date {
     left: 0;
     position: absolute;
-    top: 0;
+    top: 2em;
   }
 
   .blog-post-preview__excerpt,
