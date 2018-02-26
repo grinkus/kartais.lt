@@ -9,7 +9,7 @@
 }
 
 .blog-post-preview + .blog-post-preview {
-  border-top: 1px dotted #EEE;
+  margin-top: 1em;
 }
 
 .blog-post-preview__link {
@@ -18,8 +18,13 @@
   text-decoration: none;
 }
 
+.blog-post-preview__link:visited {
+  color: #666;
+}
+
 .blog-post-preview__link .blog-post-preview__title {
   text-decoration: underline;
+  text-shadow: 1px 1px 0 #FFF, -1px 1px 0 #FFF;
 }
 
 .blog-post-preview__link:hover .blog-post-preview__title {
