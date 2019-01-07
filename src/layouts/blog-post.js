@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from '../components/Helmet'
+import { graphql } from 'gatsby'
 
 import './blog-post.css';
 

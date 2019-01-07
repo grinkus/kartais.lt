@@ -6,9 +6,9 @@
 
 const path = require('path');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
+exports.createPages = ({ actions, graphql }) => {
 
-  const { createPage } = boundActionCreators;
+  const { createPage } = actions;
 
   const blogPostTemplate = path.resolve('src/layouts/blog-post.js');
 
