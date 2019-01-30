@@ -1,48 +1,58 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+
+import Layout from '../components/Layout';
 
 import './blog-post-preview.css';
 
-const IndexPage = ({ data }) => {
+class BlogIndex extends React.Component {
+  render() {
 
-  const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const posts = data.allMarkdownRemark.edges
 
-  return (
-    <div className="blog-post-previews">
-      {
-        posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <article
-                className="blog-post-preview"
-                key={post.id}
-              >
-                <Link
-                  className="blog-post-preview__link"
-                  to={post.frontmatter.path}
-                >
-                <header>
-                  <time
-                    className="blog-post-preview__date"
-                    dateTime={`${post.frontmatter.date}Z`}
+    return (
+
+      <Layout>
+        <div className="blog-post-previews">
+          {
+            posts
+              .filter(post => post.node.frontmatter.title.length > 0)
+              .map(({ node: post }) => {
+                return (
+                  <article
+                    className="blog-post-preview"
+                    key={post.id}
                   >
-                    {post.frontmatter.date}
-                  </time>
-                  <h2 className="blog-post-preview__title">
-                    {post.frontmatter.title}
-                  </h2>
-                </header>
-                <p className="blog-post-preview__excerpt">{post.excerpt}</p>
-                </Link>
-              </article>
-            );
-          })
-      }
-    </div>
-  );
+                    <Link
+                      className="blog-post-preview__link"
+                      to={post.frontmatter.path}
+                    >
+                    <header>
+                      <time
+                        className="blog-post-preview__date"
+                        dateTime={`${post.frontmatter.date}Z`}
+                      >
+                        {post.frontmatter.date}
+                      </time>
+                      <h2 className="blog-post-preview__title">
+                        {post.frontmatter.title}
+                      </h2>
+                    </header>
+                    <p className="blog-post-preview__excerpt">
+                      {post.excerpt}
+                    </p>
+                    </Link>
+                  </article>
+                );
+              })
+          }
+        </div>
+      </Layout>
 
+    );
+
+  }
 }
 
 export const pageQuery = graphql`
@@ -63,4 +73,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default IndexPage
+export default BlogIndex

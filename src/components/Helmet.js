@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import '../../../node_modules/normalize.css';
-import '../../site.css';
+import '../../node_modules/normalize.css';
+import '../site.css';
 
 const TemplateWrapper = ({ title }) => (
   <Helmet
