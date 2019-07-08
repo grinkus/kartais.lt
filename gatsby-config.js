@@ -18,6 +18,7 @@ module.exports = {
         plugins: ['gatsby-remark-images'],
       },
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
