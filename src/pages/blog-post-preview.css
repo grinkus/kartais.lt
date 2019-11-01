@@ -21,7 +21,13 @@
 }
 
 .blog-post-preview__link:visited {
-  color: #666;
+  color: #767681;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-post-preview__link:visited {
+    color: #999;
+  }
 }
 
 .blog-post-preview__link .blog-post-preview__title {
