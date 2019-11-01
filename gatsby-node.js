@@ -4,13 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
+const path = require(`path`);
 const {createFilePath} = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({actions, graphql}) => {
   const {createPage} = actions;
 
-  const blogPostTemplate = path.resolve('src/layouts/blog-post.js');
+  const blogPostTemplate = path.resolve(`src/layouts/blog-post.js`);
 
   return graphql(`
     {

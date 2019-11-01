@@ -6,10 +6,10 @@ import '../site.css';
 
 const TemplateWrapper = ({ title }) => (
   <Helmet
-    title={title ? `${title} - kartais.lt` : 'kartais.lt'}
+    title={title ? `${title} - kartais.lt` : `kartais.lt`}
     meta={[
-      { name: 'description', content: 'kartais piktas, kartais blogas' },
-      { name: 'keywords', content: 'kartais' },
+      { name: `description`, content: `kartais piktas, kartais blogas` },
+      { name: `keywords`, content: `kartais` },
     ]}
   >
     <html lang="lt" />

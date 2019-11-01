@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 
@@ -7,27 +7,21 @@ import './blog-post-preview.css';
 
 class BlogIndex extends React.Component {
   render() {
-
-    const { data } = this.props
-    const posts = data.allMarkdownRemark.edges
+    const { data } = this.props;
+    const posts = data.allMarkdownRemark.edges;
 
     return (
-
       <Layout>
         <div className="blog-post-previews">
-          {
-            posts
-              .filter(post => post.node.frontmatter.title.length > 0)
-              .map(({ node: post }) => {
-                return (
-                  <article
-                    className="blog-post-preview"
-                    key={post.id}
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }) => {
+              return (
+                <article className="blog-post-preview" key={post.id}>
+                  <Link
+                    className="blog-post-preview__link"
+                    to={post.frontmatter.path}
                   >
-                    <Link
-                      className="blog-post-preview__link"
-                      to={post.frontmatter.path}
-                    >
                     <header>
                       <time
                         className="blog-post-preview__date"
@@ -42,22 +36,21 @@ class BlogIndex extends React.Component {
                     <p className="blog-post-preview__excerpt">
                       {post.excerpt}
                     </p>
-                    </Link>
-                  </article>
-                );
-              })
-          }
+                  </Link>
+                </article>
+              );
+            })}
         </div>
       </Layout>
-
     );
-
   }
 }
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 250)
@@ -73,4 +66,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default BlogIndex
+export default BlogIndex;
