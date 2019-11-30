@@ -23,9 +23,9 @@ yra tiesų tiesiausia (čia imta iš
 
 Toks jau tas mano tikėjimas, kad viską, ką turi pagaminęs, reikia pist
 tiesiai internetams. Kad būtų tas jau visaip linksniuojamas
-**release'as**. Suprask, kad tai tiesiog būtų prieinama bet kuriuo metu
-ir iš bet kur. Kaip ir šitas kartais.lt. Yra tekstas -- tekstas
-prieinamas. Yra app'as -- app'as prieinamas.
+_release'as_. Suprask, kad tai tiesiog būtų prieinama bet kuriuo metu
+ir iš bet kur. Kaip ir šitas kartais.lt. Yra tekstas – tekstas
+prieinamas. Yra app'as – app'as prieinamas.
 
 Suprask, reikia dirbti link tos pačios pačios minimaliausios, bet esmę
 duodančios versijos, kuri veikia nepriekaištingai. Gal jai kažko
@@ -39,5 +39,5 @@ malt, iki kol ateis tų metų pabaiga ir reikės startuoti. Ir kai jau
 norėsis startuoti, pasimatys, kad čia tie programišiai bybių
 priprogramavo – nežinau kur jie žiūrėjo, bet tikrai ne ten, kur aš. Kas
 kaip ir esmė, gaunasi: abu ten pat turėjo žiūrėt. O nežiūrėjo tik dėl
-to, kad **deadline'as** yra. Ateis **deadline'as**, tada ir pažiūrėsim.
-Arba ateis **deadline'as** ir praeis. Čia jau nuo perspektyvos.
+to, kad _deadline'as_ yra. Ateis _deadline'as_, tada ir pažiūrėsim.
+Arba ateis _deadline'as_ ir praeis. Čia jau nuo perspektyvos.
