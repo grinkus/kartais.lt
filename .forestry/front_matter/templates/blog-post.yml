@@ -19,3 +19,5 @@ fields:
     export_format: YYYY-MM-DDThh:mm
   default: now
   hidden: true
+pages:
+- posts/example.md
