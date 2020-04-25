@@ -5,52 +5,54 @@
  */
 
 const path = require(`path`);
-const {createFilePath} = require(`gatsby-source-filesystem`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.createPages = ({actions, graphql}) => {
-  const {createPage} = actions;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   const blogPostTemplate = path.resolve(`src/layouts/blog-post.js`);
 
   return graphql(`
     {
       allMarkdownRemark(
-        sort: {order: DESC, fields: [frontmatter___date]}
-        limit: 1000
+        sort: { order: DESC, fields: [frontmatter___date] }
       ) {
-        edges {
-          node {
-            excerpt(pruneLength: 250)
-            html
-            id
-            frontmatter {
-              date
-              path
-              title
-            }
+        nodes {
+          frontmatter {
+            date
+            title
+          }
+          fields {
+            slug
           }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    result.data.allMarkdownRemark.nodes.forEach((node) => {
+      const path = node.fields.slug.substr(
+        0,
+        node.fields.slug.length - 1,
+      );
       createPage({
-        path: node.frontmatter.path,
+        path,
         component: blogPostTemplate,
-        context: {},
+        context: {
+          slug: node.fields.slug,
+        },
       });
     });
   });
 };
 
-exports.onCreateNode = ({node, actions, getNode}) => {
-  const {createNodeField} = actions;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({node, getNode});
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,

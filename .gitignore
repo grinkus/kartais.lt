@@ -18,5 +18,8 @@ pids
 # Optional eslint cache
 .eslintcache
 
+# Content
+src/content
+
 # Built files
 public/
