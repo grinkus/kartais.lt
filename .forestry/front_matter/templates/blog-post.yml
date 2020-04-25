@@ -18,5 +18,6 @@ fields:
     display_utc: false
     export_format: YYYY-MM-DDThh:mm
   default: now
+  hidden: true
 pages:
 - posts/example-3am-04-25-3h.md
