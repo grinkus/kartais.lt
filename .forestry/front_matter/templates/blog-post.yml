@@ -14,6 +14,6 @@ fields:
   config:
     required: true
     date_format: YYYY-MM-DD
-    time_format: hh:mm ZZ
+    time_format: h:mm A ZZ
     display_utc: false
     export_format: YYYY-MM-DDThh:mmTZZ
