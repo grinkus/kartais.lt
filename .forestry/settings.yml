@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: https://jenkins.grink.us/job/kartais.lt/build?token=13A73DD7CF9554A2491E7D88D2237586E8EE8A39F6D644791A87EA2DB2C1CB31E32B4BBE3A6AB639CFB6DB7
+webhook_url: ''
 sections:
 - type: directory
   path: posts
