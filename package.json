@@ -4,25 +4,25 @@
   "version": "1.0.0",
   "author": "grinkus <karolis@kartais.lt>",
   "dependencies": {
-    "gatsby": "^2.17.7",
-    "gatsby-image": "^2.2.30",
-    "gatsby-plugin-catch-links": "^2.1.15",
-    "gatsby-plugin-feed": "^2.3.19",
-    "gatsby-plugin-google-analytics": "^2.1.23",
-    "gatsby-plugin-manifest": "^2.2.26",
-    "gatsby-plugin-offline": "^3.0.17",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-sharp": "^2.2.36",
-    "gatsby-remark-images": "^3.1.28",
-    "gatsby-source-filesystem": "^2.1.35",
-    "gatsby-transformer-remark": "^2.6.32",
-    "gatsby-transformer-sharp": "^2.3.2",
+    "gatsby": "^2.20.35",
+    "gatsby-image": "^2.3.5",
+    "gatsby-plugin-catch-links": "^2.2.4",
+    "gatsby-plugin-feed": "^2.4.4",
+    "gatsby-plugin-google-analytics": "^2.2.5",
+    "gatsby-plugin-manifest": "^2.3.7",
+    "gatsby-plugin-offline": "^3.1.5",
+    "gatsby-plugin-react-helmet": "^3.2.5",
+    "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-remark-images": "^3.2.6",
+    "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-transformer-remark": "^2.7.5",
+    "gatsby-transformer-sharp": "^2.4.7",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-fittext": "^1.0.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^6.0.0"
   },
   "keywords": [],
   "license": "UNLICENSED",
@@ -35,7 +35,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.0.2",
-    "prettier": "^1.18.2"
+    "eslint-config-react-app": "^5.2.1",
+    "prettier": "^2.0.5"
   }
 }
