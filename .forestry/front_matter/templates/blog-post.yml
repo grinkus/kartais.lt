@@ -20,4 +20,4 @@ fields:
   default: now
   hidden: true
 pages:
-- posts/example.md
+- posts/test.md
