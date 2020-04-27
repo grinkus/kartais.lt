@@ -3,6 +3,8 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 
+import '../../typeface/index.css';
+
 import './blog-post-preview.css';
 
 const BlogIndex = ({ data }) => {
