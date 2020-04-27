@@ -25,7 +25,7 @@ pasisėdėsim“. Net ir tada galima kalt dar _fallback'ų_, kur „labas, tai k
 
 Aš, kaip signalo skleidėjas, kuris yra suinteresuotas signalo sklaida, greičiu
 ir kokybe, signalą, aišku, duodu į vieną eterį, apie kurį žino visi visi net ir
-labai menkai susiję su signalo žinute. Idėja paprasta -- aš nesirenku kur
+labai menkai susiję su signalo žinute. Idėja paprasta – aš nesirenku kur
 paduodu: paduodu ten, kur visi žino. O kam svarbu, tas atsirinks. Kam nesvarbu,
 tas galės išfiltruot.
 

@@ -15,7 +15,7 @@ atjaustų (kad ir kuo skiriasi tų dviejų žodžių reikšmės). Dar aš noriu,
 Duokit man babkių, sako jau kitas hipotetinis žmogus. Man reikia babkių, kad
 galėčiau labiau alaus ir labiau cigarečių. Dar kartais norėčiau labiau su
 _cart’ais_ pavažinėt. Nu taip kad jau atsakančiai būtų. Šiaip tai aš babkių
-gaunu -- kas mėnesį į savo banko sąskaitą. Bet aš dar noriu ir papildomų, kad
+gaunu – kas mėnesį į savo banko sąskaitą. Bet aš dar noriu ir papildomų, kad
 nu kažkaip ten kauptųsi ir galėtų jas naudot visa mano komanda. Nesu tikras _na
 chera_, bet nu aš noriu; ir dar nenoriu savo babkių leist. Nes mano babkės yra
 ne tavo babkės. Tavo babkės yra mano babkės. Normaliai, nu.
@@ -28,7 +28,7 @@ ir meilus, ir dar net žalią šviesytę užsidegu, kai noriu intymaus.
 Bet nichuja nenoriu to viso bedugnės žiūrėjimo į mane, ir žiauriai nenoriu
 atiduot savęs. Nenoriu parodyt, nes galiu būt atstumtas. Nenoriu bandyt suprast
 kas vyksta, nes geriau, kad man pasakytų. Ir pasakyti turėtų netgi be jokios
-užklausos -- _va taip vat_ tiesiog, man šviesytę uždegus. Nes aš trukdyt
+užklausos – _va taip vat_ tiesiog, man šviesytę uždegus. Nes aš trukdyt
 nenoriu. Nenoriu suartėt. Noriu turėt savo atstumą ir kažkaip sumažint atstumą
 tarp mūsų, žinai?
 
