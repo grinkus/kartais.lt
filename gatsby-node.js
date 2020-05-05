@@ -5,6 +5,7 @@
  */
 
 const path = require(`path`);
+const DirectoryNamedWebpackPlugin = require(`directory-named-webpack-plugin`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({ actions, graphql }) => {
@@ -36,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.nodes.forEach((node) => {
       const path = node.fields.slug.substr(
         0,
-        node.fields.slug.length - 1,
+        node.fields.slug.length - 1
       );
       createPage({
         path,
@@ -59,4 +60,31 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  const config = {
+    resolve: {
+      modules: [path.resolve(__dirname, `src`), `node_modules`],
+      plugins: [new DirectoryNamedWebpackPlugin()],
+    },
+  };
+
+  if (stage === `build-javascript`) {
+    config.optimization = {
+      splitChunks: {
+        cacheGroups: {
+          styles: false,
+        },
+      },
+    };
+  }
+
+  actions.setWebpackConfig(config);
 };

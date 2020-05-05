@@ -1,0 +1,81 @@
+@import '../styles/placeholders/baseline-offset.css';
+
+.TextContent {
+  margin: 0 auto;
+  max-width: var(--main-width);
+  padding-bottom: 8rem;
+  padding-left: var(--half-gutter);
+  padding-right: var(--half-gutter);
+
+  > aside {
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > p {
+      line-height: inherit;
+    }
+  }
+
+  > footer {
+    opacity: 0.65;
+  }
+
+  @media (min-width: 80em) {
+    column-gap: var(--gutter);
+    display: grid;
+    grid-template-columns:
+      1fr
+      var(--second-split)
+      var(--main-width)
+      var(--second-split)
+      1fr;
+    max-width: initial;
+    padding-left: 0;
+    padding-right: 0;
+    row-gap: 0;
+
+    > * {
+      grid-column: 3;
+    }
+
+    > aside {
+      --baseline-offset: 0.291666rem;
+
+      @extend baseline-offset;
+
+      font-size: 0.854rem;
+      grid-column: 4;
+      line-height: 1.5rem;
+      margin-bottom: calc(var(--baseline-offset) * -1);
+      padding-top: var(--baseline-offset);
+    }
+
+    > footer {
+      grid-column: 2;
+    }
+  }
+
+  @media (min-width: 118.75em) {
+    grid-template-columns:
+      1fr
+      var(--third-split)
+      var(--second-split)
+      var(--main-width)
+      var(--second-split)
+      var(--third-split)
+      1fr;
+
+    > * {
+      grid-column: 4;
+    }
+
+    > aside {
+      grid-column: 5 / 7;
+    }
+
+    > footer {
+      grid-column: 3;
+    }
+  }
+}

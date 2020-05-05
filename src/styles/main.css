@@ -1,0 +1,204 @@
+@import './placeholders/baseline-offset.css';
+
+html {
+  background: #fdfcf9;
+  color: #171717;
+  font-family: 'Cardo', serif;
+  font-size: 16px;
+
+  --main-width: 30rem;
+  --gutter: 2rem;
+  --line-height: 2rem;
+  --ratio: 1.618;
+
+  --first-split: calc(var(--main-width) / var(--ratio));
+  --second-split: calc(var(--first-split) / var(--ratio));
+  --third-split: calc(var(--second-split) / var(--ratio));
+  --fourth-split: calc(var(--third-split) / var(--ratio));
+
+  --half-gutter: calc(var(--gutter) / 2);
+
+  @media (min-width: 40em) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 62em) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 92em) {
+    font-size: 24px;
+  }
+}
+
+body {
+  line-height: var(--line-height);
+  padding: 0;
+}
+
+h1,
+.h1 {
+  --baseline-offset: 0.166666rem;
+  @extend baseline-offset;
+
+  font-size: 2.618rem;
+  font-weight: normal;
+  font-weight: bold;
+  line-height: 4rem;
+  margin-top: 4rem;
+  opacity: 0.9;
+  padding-bottom: 2rem;
+}
+
+h2,
+.h2 {
+  --baseline-offset: 0.291666rem;
+  @extend baseline-offset;
+
+  font-size: 2.236rem;
+  font-weight: normal;
+  font-weight: bold;
+  line-height: 4rem;
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+
+h3,
+.h3 {
+  --baseline-offset: 0.5rem;
+  @extend baseline-offset;
+
+  font-size: 1.618rem;
+  font-weight: normal;
+  font-weight: bold;
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+
+h4,
+.h4 {
+  --baseline-offset: 0.583333rem;
+  @extend baseline-offset;
+
+  font-size: 1.38197rem;
+  font-weight: normal;
+  font-weight: bold;
+  margin-top: 2rem;
+  opacity: 0.95;
+}
+
+h5,
+.h5 {
+  --baseline-offset: 0.666666rem;
+  @extend baseline-offset;
+
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+
+h6,
+.h6 {
+  --baseline-offset: 0.791666rem;
+  @extend baseline-offset;
+
+  font-size: 0.618rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  + h1,
+  + .h1,
+  + h2,
+  + .h2,
+  + h3,
+  + .h3,
+  + h4,
+  + .h4,
+  + h5,
+  + .h5,
+  + h6,
+  + .h6 {
+    margin-top: 0;
+  }
+}
+
+p,
+.p {
+  --baseline-offset: 0.666666rem;
+  @extend baseline-offset;
+
+  font: inherit;
+  margin-top: 0;
+
+  &:first-of-type {
+    text-indent: 0;
+  }
+}
+
+p,
+aside,
+footer {
+  + p {
+    text-indent: 1.618em;
+  }
+}
+
+ul,
+ol {
+  --baseline-offset: 0.666666rem;
+  @extend baseline-offset;
+
+  padding-bottom: 1rem;
+  padding-left: 0;
+}
+
+li {
+}
+
+a {
+  &[href*="//"]:not([href*="kartais.lt"])
+  {
+    --icon-size: 16px;
+    --icon-padding: 0.125em;
+    --icon-space: calc(var(--icon-size) + var(--icon-padding));
+    padding-right: var(--icon-space);
+
+    &::after {
+      background: url('../images/external-link.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      display: inline-block;
+      height: var(--icon-size);
+      margin-left: var(--icon-padding);
+      margin-right: calc(var(--icon-space) * -1);
+      vertical-align: middle;
+      width: var(--icon-size);
+    }
+  }
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #000;
+    color: #ececec;
+  }
+}
+*/

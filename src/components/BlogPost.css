@@ -1,0 +1,5 @@
+.BlogPost {
+  &__title {
+    padding-bottom: 2rem;
+  }
+}

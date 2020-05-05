@@ -1,47 +1,20 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
+// Components.
+import BlogPostTeaser from 'components/BlogPostTeaser';
+import Layout from 'components/Layout';
 
+// Styles.
 import '../../typeface/index.css';
 
-import './blog-post-preview.css';
-
-const BlogIndex = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes;
-
-  return (
-    <Layout>
-      <div className="blog-post-previews">
-        {posts.map((post) => {
-          return (
-            <article className="blog-post-preview" key={post.id}>
-              <Link
-                className="blog-post-preview__link"
-                to={post.fields.slug}
-              >
-                <header>
-                  <time
-                    className="blog-post-preview__date"
-                    dateTime={`${post.frontmatter.date}Z`}
-                  >
-                    {post.frontmatter.date}
-                  </time>
-                  <h2 className="blog-post-preview__title">
-                    {post.frontmatter.title}
-                  </h2>
-                </header>
-                <p className="blog-post-preview__excerpt">
-                  {post.excerpt}
-                </p>
-              </Link>
-            </article>
-          );
-        })}
-      </div>
-    </Layout>
-  );
-};
+const BlogIndex = ({ data }) => (
+  <Layout>
+    {data.allMarkdownRemark.nodes.map((post) => (
+      <BlogPostTeaser post={post} />
+    ))}
+  </Layout>
+);
 
 export const query = graphql`
   query {

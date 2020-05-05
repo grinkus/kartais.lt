@@ -29,6 +29,17 @@ module.exports = {
         plugins: [`gatsby-remark-images`],
       },
     },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-import`)(),
+          require(`postcss-simple-extend`)(),
+          require(`postcss-nested`)(),
+          require(`postcss-preset-env`)(),
+        ],
+      },
+    },
     `gatsby-plugin-feed`,
     `gatsby-transformer-sharp`,
     {

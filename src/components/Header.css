@@ -1,0 +1,40 @@
+.Header {
+  margin: 0 auto;
+  max-width: var(--main-width);
+  padding-left: var(--half-gutter);
+  padding-right: var(--half-gutter);
+
+  @media (min-width: 80em) {
+    column-gap: var(--gutter);
+    display: grid;
+    grid-template-columns:
+      1fr
+      var(--second-split)
+      var(--main-width)
+      var(--second-split)
+      1fr;
+    max-width: initial;
+    padding-left: 0;
+    padding-right: 0;
+    row-gap: 0;
+
+    &__logo {
+      grid-column: 3;
+    }
+  }
+
+  @media (min-width: 118.75em) {
+    grid-template-columns:
+      1fr
+      var(--third-split)
+      var(--second-split)
+      var(--main-width)
+      var(--second-split)
+      var(--third-split)
+      1fr;
+
+    &__logo {
+      grid-column: 4;
+    }
+  }
+}
