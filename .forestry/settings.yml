@@ -9,6 +9,8 @@ sections:
   label: Ataskaita
   create: documents
   match: "*"
+  templates:
+  - ataskaita-post
 - type: directory
   path: posts
   label: Blog posts
