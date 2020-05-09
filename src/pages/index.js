@@ -5,9 +5,6 @@ import { graphql } from 'gatsby';
 import BlogPostTeaser from 'components/BlogPostTeaser';
 import Layout from 'components/Layout';
 
-// Styles.
-import '../../typeface/index.css';
-
 const BlogIndex = ({ data }) => (
   <Layout>
     {data.allMarkdownRemark.nodes.map((post) => (

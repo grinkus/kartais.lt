@@ -6,6 +6,7 @@ import Header from 'components/Header';
 
 // Styles.
 import '../../node_modules/normalize.css';
+import '../../typeface/index.css';
 import '../styles/main.css';
 
 const Layout = ({ children, withBaselineGrid }) => {
