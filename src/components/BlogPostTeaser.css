@@ -17,8 +17,12 @@
   }
 
   &__title {
-    font-weight: bold;
-    text-decoration: underline;
+    &,
+    p&,
+    .p& {
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 
   &__link:focus &__title,
