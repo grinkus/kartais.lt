@@ -1,0 +1,24 @@
+---
+start: 2014-09-13T21:00:00Z
+end: 2014-09-21T21:00:00Z
+
+---
+Aš įtariu rūkalius susimokymu. Nuo praeito įrašo niekas dar nepaprašė rūkyt, nors iki šiol statistiškai būdavo vienas-kablelis-penki prašytojo savaitėje.
+
+Aš juos stebiu.
+
+***
+
+Ataskaita dabar bus savaitgalinis reikalas. Savaitgalis, nežinantiems – dienos nuo šeštadienio iki pirmadienio imtinai. Ir nereikia man pasakot kaip aš kažko nepadariau.
+
+***
+
+Sekmadieniu (vakar) pažymėtam įraše turiu pakeverzojęs „savaitės minčių stygius – glaudžiai susijęs su darbo įdomumu: kuo daugiau nuoširdžiai dirbu, tuo mažiau turiu ką papasakoti.“
+
+Įtariu, kad tiesos yra, nes šita ataskaita trumpiausia.
+
+Šiandien dar nusprendžiau, kad reikės kada [interakcijoms](http://www.interakcijos.lt/) pasiūlyti pastraipsniuoti. Nesu tikras ar jie linkę į dizainą, procesą ar saviiešką, ale pajudint būtų smagu. Tuo pačiu ir pasidaryčiau _published_ autorius, kas jau savaime reiškia, kad galėsiu autobusais važinėt veik už dyką.
+
+***
+
+O šiaip tai daug svarbiau yra tai, kas patinka man rezultate, kurį gaunu perfiltravęs visus projekto reikalavimus ir taikinius, nei tai, ką aš įsivaizduoju esant kietu daiktu. Mano akis yra geriausia akis. Man.
