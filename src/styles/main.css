@@ -143,7 +143,9 @@ p,
   --baseline-offset: 0.666666rem;
   @extend baseline-offset;
 
-  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
   margin-top: 0;
 
   &:first-of-type {
