@@ -21,6 +21,7 @@ fields:
     time_format: 
     display_utc: false
 pages:
+- ataskaita/uz-lapkricio-02-2019-lapkricio-17-2019.md
 - ataskaita/uz-lapkricio-07-lapkricio-23-2014.md
 - ataskaita/uz-lapkricio-23-sausio-05-2015.md
 - ataskaita/uz-rugpjucio-30-rugsejo-06-2014.md
