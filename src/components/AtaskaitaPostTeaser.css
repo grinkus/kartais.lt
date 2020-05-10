@@ -1,8 +1,6 @@
-.BlogPostTeaser {
-  margin: 4rem 0;
-
-  &__excerpt {
-    opacity: 0.65;
+.AtaskaitaPostTeaser {
+  &:first-of-type {
+    margin-top: 4rem;
   }
 
   &__link {
@@ -18,7 +16,6 @@
     &,
     p&,
     .p& {
-      font-weight: bold;
       text-decoration: underline;
     }
   }
@@ -29,16 +26,6 @@
   }
 
   @media (min-width: 80em) {
-    &__date {
-      grid-column: 2;
-      grid-row: 1;
-    }
-
-    &__excerpt {
-      grid-column: 4;
-      grid-row: 1;
-    }
-
     &__link {
       column-gap: var(--gutter);
       display: grid;
@@ -61,14 +48,6 @@
   }
 
   @media (min-width: 118.75em) {
-    &__date {
-      grid-column: 3;
-    }
-
-    &__excerpt {
-      grid-column: 6 / 7;
-    }
-
     &__link {
       grid-template-columns:
         1fr

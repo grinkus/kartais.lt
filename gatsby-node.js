@@ -7,6 +7,25 @@
 const path = require(`path`);
 const DirectoryNamedWebpackPlugin = require(`directory-named-webpack-plugin`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const slugify = require(`slugify`);
+
+const months = [
+  `sausio`,
+  `vasario`,
+  `kovo`,
+  `balandžio`,
+  `gegužės`,
+  `birželio`,
+  `liepos`,
+  `rugpjūčio`,
+  `rugsėjo`,
+  `spalio`,
+  `lapkričio`,
+  `gruodžio`,
+];
+
+const getDateString = (date) =>
+  `${date.getFullYear()} ${months[date.getMonth()]} ${date.getDate()}`;
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -53,12 +72,29 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
+    const fileNode = getNode(node.parent);
+
+    if (fileNode.sourceInstanceName === `ataskaitaPosts`) {
+      const split = fileNode.name.split(`_`);
+      const startDate = new Date(split[0]);
+      const endDate = new Date(split[1]);
+
+      const title = `Už nuo ${getDateString(
+        startDate
+      )} iki ${getDateString(endDate)}`;
+
+      createNodeField({ name: `title`, node, value: title });
+      createNodeField({
+        name: `slug`,
+        node,
+        value: `/ataskaita/${slugify(title).toLowerCase()}/`,
+      });
+    }
+
+    if (fileNode.sourceInstanceName === `blogPosts`) {
+      const slug = createFilePath({ node, getNode });
+      createNodeField({ name: `slug`, node, value: slug });
+    }
   }
 };
 

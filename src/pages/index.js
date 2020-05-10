@@ -8,7 +8,7 @@ import Layout from 'components/Layout';
 const BlogIndex = ({ data }) => (
   <Layout>
     {data.allMarkdownRemark.nodes.map((post) => (
-      <BlogPostTeaser post={post} />
+      <BlogPostTeaser key={post.id} post={post} />
     ))}
   </Layout>
 );
@@ -16,6 +16,7 @@ const BlogIndex = ({ data }) => (
 export const query = graphql`
   query {
     allMarkdownRemark(
+      filter: { fileAbsolutePath: { glob: "**/src/content/posts/*" } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       nodes {

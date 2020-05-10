@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={post.frontmatter.title} />
+      <Helmet title={post.frontmatter.title || post.fields.title} />
       <BlogPost post={post} />
     </Layout>
   );
@@ -27,6 +27,7 @@ export const query = graphql`
       }
       fields {
         slug
+        title
       }
     }
   }

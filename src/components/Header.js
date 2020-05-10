@@ -16,11 +16,20 @@ const LinkOrNot = ({ children, locationProps, href }) => {
 
 const Header = withLocation(({ children, locationProps }) => (
   <header className="Header">
-    <div className="Header__logo">
-      <LinkOrNot href="/" locationProps={locationProps}>
-        kartais
-      </LinkOrNot>
-    </div>
+    <nav className="Header__nav">
+      <ul className="Header__nav-items">
+        <li className="Header__nav-item">
+          <LinkOrNot href="/" locationProps={locationProps}>
+            kartais
+          </LinkOrNot>
+        </li>
+        <li className="Header__nav-item">
+          <LinkOrNot href="/ataskaita" locationProps={locationProps}>
+            ataskaita
+          </LinkOrNot>
+        </li>
+      </ul>
+    </nav>
   </header>
 ));
 

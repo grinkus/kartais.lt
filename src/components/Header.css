@@ -4,6 +4,19 @@
   padding-left: var(--half-gutter);
   padding-right: var(--half-gutter);
 
+  &__nav-item {
+    display: inline-block;
+
+    & + & {
+      margin-left: 1em;
+    }
+  }
+
+  &__nav-items {
+    margin: 0;
+    padding: 0;
+  }
+
   @media (min-width: 80em) {
     column-gap: var(--gutter);
     display: grid;
@@ -18,7 +31,7 @@
     padding-right: 0;
     row-gap: 0;
 
-    &__logo {
+    &__nav {
       grid-column: 3;
     }
   }
@@ -33,7 +46,7 @@
       var(--third-split)
       1fr;
 
-    &__logo {
+    &__nav {
       grid-column: 4;
     }
   }

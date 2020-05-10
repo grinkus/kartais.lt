@@ -10,7 +10,9 @@ import './BlogPost.css';
 const BlogPost = ({ post }) => (
   <article className="BlogPost">
     <TextContent>
-      <h1 className="BlogPost__title">{post.frontmatter.title}</h1>
+      <h1 className="BlogPost__title">
+        {post.frontmatter.title || post.fields.title}
+      </h1>
       <footer>
         <p>
           <time dateTime={`${post.frontmatter.date}Z`}>

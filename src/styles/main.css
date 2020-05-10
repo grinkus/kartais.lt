@@ -1,5 +1,3 @@
-@import './placeholders/baseline-offset.css';
-
 html {
   background: #fdfcf9;
   color: #171717;
@@ -39,10 +37,8 @@ body {
 h1,
 .h1 {
   --baseline-offset: 0.166666rem;
-  @extend baseline-offset;
 
   font-size: 2.618rem;
-  font-weight: normal;
   font-weight: bold;
   line-height: 4rem;
   margin-top: 4rem;
@@ -53,10 +49,8 @@ h1,
 h2,
 .h2 {
   --baseline-offset: 0.291666rem;
-  @extend baseline-offset;
 
   font-size: 2.236rem;
-  font-weight: normal;
   font-weight: bold;
   line-height: 4rem;
   margin-top: 2rem;
@@ -66,10 +60,8 @@ h2,
 h3,
 .h3 {
   --baseline-offset: 0.5rem;
-  @extend baseline-offset;
 
   font-size: 1.618rem;
-  font-weight: normal;
   font-weight: bold;
   margin-top: 2rem;
   opacity: 0.9;
@@ -78,10 +70,8 @@ h3,
 h4,
 .h4 {
   --baseline-offset: 0.583333rem;
-  @extend baseline-offset;
 
   font-size: 1.38197rem;
-  font-weight: normal;
   font-weight: bold;
   margin-top: 2rem;
   opacity: 0.95;
@@ -90,7 +80,6 @@ h4,
 h5,
 .h5 {
   --baseline-offset: 0.666666rem;
-  @extend baseline-offset;
 
   font-size: 1rem;
   font-weight: bold;
@@ -101,7 +90,6 @@ h5,
 h6,
 .h6 {
   --baseline-offset: 0.791666rem;
-  @extend baseline-offset;
 
   font-size: 0.618rem;
   font-weight: bold;
@@ -138,10 +126,35 @@ h6,
   }
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+.p,
+ul,
+ol,
+blockquote {
+  /**
+   * Baseline grid offset formula:
+   * font-size * (line-height-ratio - cap-height-ratio) / 2
+   */
+
+  margin-bottom: calc(var(--baseline-offset) * -1);
+  padding-top: var(--baseline-offset);
+}
+
 p,
 .p {
   --baseline-offset: 0.666666rem;
-  @extend baseline-offset;
 
   font-size: inherit;
   font-weight: inherit;
@@ -164,7 +177,6 @@ footer {
 ul,
 ol {
   --baseline-offset: 0.666666rem;
-  @extend baseline-offset;
 
   padding-bottom: 1rem;
   padding-left: 0;
@@ -194,6 +206,24 @@ a {
       width: var(--icon-size);
     }
   }
+}
+
+hr {
+  border: 0;
+  outline: 1px solid yellow;
+  margin: 3rem 0 2rem;
+  width: 100%;
+}
+
+blockquote {
+  --baseline-offset: 0.583333rem;
+
+  font-size: 1.38197rem;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 2rem;
+  opacity: 0.95;
+  padding-bottom: calc(2rem - var(--baseline-offset));
 }
 
 /*

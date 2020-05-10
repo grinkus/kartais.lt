@@ -15,6 +15,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/ataskaita`,
+        name: `ataskaitaPosts`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-images`],
@@ -25,7 +32,6 @@ module.exports = {
       options: {
         postCssPlugins: [
           require(`postcss-import`)(),
-          require(`postcss-simple-extend`)(),
           require(`postcss-nested`)(),
           require(`postcss-preset-env`)(),
         ],

@@ -1,5 +1,3 @@
-@import '../styles/placeholders/baseline-offset.css';
-
 .TextContent {
   margin: 0 auto;
   max-width: var(--main-width);
@@ -42,13 +40,16 @@
     > aside {
       --baseline-offset: 0.291666rem;
 
-      @extend baseline-offset;
-
       font-size: 0.854rem;
       grid-column: 4;
       line-height: 1.5rem;
       margin-bottom: calc(var(--baseline-offset) * -1);
       padding-top: var(--baseline-offset);
+    }
+
+    > blockquote {
+      grid-column: 2 / 5;
+      text-align: center;
     }
 
     > footer {
@@ -72,6 +73,10 @@
 
     > aside {
       grid-column: 5 / 7;
+    }
+
+    > blockquote {
+      grid-column: 3 / 6;
     }
 
     > footer {
