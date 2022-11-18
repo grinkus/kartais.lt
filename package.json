@@ -5,7 +5,7 @@
   "author": "grinkus <karolis@kartais.lt>",
   "dependencies": {
     "directory-named-webpack-plugin": "^4.0.1",
-    "gatsby": "^2.21.24",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-catch-links": "^2.3.1",
     "gatsby-plugin-feed": "^2.5.1",
