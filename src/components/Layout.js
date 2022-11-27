@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
+import '@fontsource/cardo';
 
 // Components.
-import Helmet from 'components/Helmet';
-import Header from 'components/Header';
+import Helmet from '../components/Helmet';
+import Header from '../components/Header';
 
 // Styles.
 import '../../node_modules/normalize.css';
-import '../../typeface/index.css';
 import '../styles/main.css';
 
 const Layout = ({ children, withBaselineGrid }) => {

@@ -1,13 +1,12 @@
 import React from 'react';
-import parse from 'html-react-parser';
 
 // Components.
-import TextContent from 'components/TextContent';
+import TextContent from '../components/TextContent';
 
 // Styles.
 import './BlogPost.css';
 
-const BlogPost = ({ post }) => (
+const BlogPost = ({ children, post }) => (
   <article className="BlogPost">
     <TextContent>
       <h1 className="BlogPost__title">
@@ -20,7 +19,7 @@ const BlogPost = ({ post }) => (
           </time>
         </p>
       </footer>
-      {parse(post.html)}
+      {children}
     </TextContent>
   </article>
 );

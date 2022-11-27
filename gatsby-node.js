@@ -1,13 +1,6 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 const path = require(`path`);
-const DirectoryNamedWebpackPlugin = require(`directory-named-webpack-plugin`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const slugify = require(`slugify`);
+const slugify = require(`@sindresorhus/slugify`);
 
 const months = [
   `sausio`,
@@ -34,9 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
         nodes {
           frontmatter {
             date
@@ -44,6 +35,9 @@ exports.createPages = ({ actions, graphql }) => {
           }
           fields {
             slug
+          }
+          internal {
+            contentFilePath
           }
         }
       }
@@ -53,14 +47,14 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    result.data.allMarkdownRemark.nodes.forEach((node) => {
+    result.data.allMdx.nodes.forEach((node) => {
       const path = node.fields.slug.substr(
         0,
         node.fields.slug.length - 1
       );
       createPage({
         path,
-        component: blogPostTemplate,
+        component: `${blogPostTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
         context: {
           slug: node.fields.slug,
         },
@@ -71,7 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const fileNode = getNode(node.parent);
 
     if (fileNode.sourceInstanceName === `ataskaitaPosts`) {
@@ -93,7 +87,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (fileNode.sourceInstanceName === `blogPosts`) {
       const slug = createFilePath({ node, getNode });
-      createNodeField({ name: `slug`, node, value: slug });
+      createNodeField({ node, name: `slug`, value: slug });
     }
   }
 };
@@ -105,12 +99,7 @@ exports.onCreateWebpackConfig = ({
   plugins,
   actions,
 }) => {
-  const config = {
-    resolve: {
-      modules: [path.resolve(__dirname, `src`), `node_modules`],
-      plugins: [new DirectoryNamedWebpackPlugin()],
-    },
-  };
+  const config = {};
 
   if (stage === `build-javascript`) {
     config.optimization = {

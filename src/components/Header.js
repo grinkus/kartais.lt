@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // HOCs.
-import withLocation from 'HOCs/withLocation';
+import withLocation from '../HOCs/withLocation';
 
 // Styles.
 import './Header.css';

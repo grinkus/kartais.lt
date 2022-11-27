@@ -1,9 +1,9 @@
 import React from 'react';
 
 // Components.
-import Helmet from 'components/Helmet';
-import Layout from 'components/Layout';
-import TextContent from 'components/TextContent';
+import Helmet from '../components/Helmet';
+import Layout from '../components/Layout';
+import TextContent from '../components/TextContent';
 
 const Test = () => (
   <>

@@ -2,33 +2,34 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // Components.
-import AtaskaitaPostTeaser from 'components/AtaskaitaPostTeaser';
-import Helmet from 'components/Helmet';
-import Layout from 'components/Layout';
+import AtaskaitaPostTeaser from '../components/AtaskaitaPostTeaser';
+import Helmet from '../components/Helmet';
+import Layout from '../components/Layout';
 
 const AtaskaitaIndex = ({ data }) => (
   <Layout>
     <Helmet title="ataskaita" />
-    {data.allMarkdownRemark.nodes.map((post) => (
-      <AtaskaitaPostTeaser id={post.id} post={post} />
+    {data.allFile.edges.map((edge) => (
+      <AtaskaitaPostTeaser id={edge.node.id} post={edge.node.childMdx} />
     ))}
   </Layout>
 );
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { glob: "**/src/content/ataskaita/*" }
-      }
-      sort: { fields: fileAbsolutePath, order: DESC }
+  {
+    allFile(
+      filter: {sourceInstanceName: {eq: "ataskaitaPosts"}}
+      sort: {childMdx: {frontmatter: {date: DESC}}}
     ) {
-      nodes {
-        fileAbsolutePath
-        id
-        fields {
-          slug
-          title
+      edges {
+        node {
+          id
+          childMdx {
+            fields {
+              slug
+              title
+            }
+          }
         }
       }
     }
