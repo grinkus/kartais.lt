@@ -13,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blogPosts`,
-        path: `./src/content/posts`,
+        path: `${__dirname}/src/content/posts`,
       },
       __key: `blogPosts`,
     },
@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `ataskaitaPosts`,
-        path: `./src/content/ataskaita`,
+        path: `${__dirname}/src/content/ataskaita`,
       },
       __key: `ataskaitaPosts`,
     },
