@@ -19,7 +19,7 @@ export const query = graphql`
   {
     allFile(
       filter: {sourceInstanceName: {eq: "ataskaitaPosts"}}
-      sort: {childMdx: {frontmatter: {date: DESC}}}
+      sort: {fields: childMdx___frontmatter___date, order: DESC}
     ) {
       edges {
         node {
